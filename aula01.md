@@ -17,6 +17,47 @@ Como um logo, você irá ultilizar peças para criar algoritimos, ou seja, para 
 
 # Fases da resolução de um problema
 
-Coletar dados
-Processar os dados (manipular, alterar ...)
-Apresentar os dados
+- [x] Coletar dados
+- [x] Processar os dados (manipular, alterar ...)
+- [x] Apresentar os dados
+
+## Tipo de dados:
+
+- [x] Strings (textos): "" '' ``
+- [x] Number: (inteiros, reais): 2, 1.5
+- [x] Boolean: true, false
+
+## Escopo e variáveis:
+
+- [x] Variáveis globais e locais
+- [x] Constantes
+
+# Operadores:
+
+- [x] Operador de atrbuição de valor
+- [x] Operador de concatenação
+
+## Estruturas de dados:
+
+### Arrays:
+
+Uma lista que contém qualquer tipo de dado
+
+### Objetos:
+
+- [x] Atributos e métodos
+- [x] Criação e manipulação de objetos
+- [x] Acesso e propriedades de objetos
+
+### functions
+
+- [x] Criar, passar argumento
+- [x] Executar
+- [x] arrow function / named function
+
+# Estrutura de repetição
+
+- [x] while
+
+
+
