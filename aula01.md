@@ -59,5 +59,8 @@ Uma lista que contém qualquer tipo de dado
 
 - [x] while
 
+# Condicionais
+
+- [x] switch
 
 
