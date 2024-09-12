@@ -34,8 +34,11 @@ Como um logo, você irá ultilizar peças para criar algoritimos, ou seja, para 
 
 # Operadores:
 
-- [x] Operador de atrbuição de valor
-- [x] Operador de concatenação
+- [x] Operador de atrbuição de valor: =
+- [x] Operador de concatenação: +
+- [x] Operadores de comparação: ==, !=, >, <, >=, <=
+- [x] Operadores lógicos
+- []
 
 ## Estruturas de dados:
 
@@ -62,6 +65,7 @@ Uma lista que contém qualquer tipo de dado
 # Condicionais
 
 - [x] switch
+- [x] if, else
 
 ## Módulos em Node.js:
 

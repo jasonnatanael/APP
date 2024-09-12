@@ -1,48 +1,53 @@
-const { select } = require("@inquirer/prompts")
+const { select, input } = require("@inquirer/prompts");
 
-const start = async() => {
-    
-    while (true) {
-        
-        const opcao = await select({
-            message: "Menu >",
-            choices: [
-                {
-                    name: "cadastrar meta", 
-                    value: "cadastrar"
-                },
-                {
-                    name: "listar meta", 
-                    value: "listar"
-                },
-                {
-                    name: "sair", 
-                    value: "sair"
-                }
-                
-            ]
-        })
+let metas = [
+  { value: "Tomar 3L de água por dia", checked: false },
+];
 
-        switch (opcao) {
-            case "cadastrar":
-                console.log("vamos cadastrar")
-                
-                break;
+const cadastrarMeta = async () => {
+  const novaMeta = await input({ message: "Digite a meta:" });
 
-            case "listar":
-                console.log("vamos listar")
-                
-                break;
+  if (novaMeta.length === 0) {
+    console.log("A meta não pode ser vazia");
+    return;
+  }
 
-            case "sair":
-                console.log("Até a próxima!")
-                return
+  metas.push({ value: novaMeta, checked: false });
+  return novaMeta;
+};
 
-        }
-        
+const listarMetas = () => {
+  metas.forEach((meta, index) => {
+    console.log(`${index + 1}. ${meta.value}`);
+  });
+};
+
+const start = async () => {
+  while (true) {
+    const opcao = await select({
+      message: "Menu >",
+      choices: [
+        { name: "cadastrar meta", value: "cadastrar" },
+        { name: "listar metas", value: "listar" },
+        { name: "sair", value: "sair" },
+      ],
+    });
+
+    switch (opcao) {
+      case "cadastrar":
+        await cadastrarMeta();
+        console.log("Meta cadastrada com sucesso!");
+        break;
+      case "listar":
+        listarMetas();
+        break;
+      case "sair":
+        console.log("Até a próxima!");
+        return;
     }
-}
+  }
+};
 
-start()
+start();
 
 
