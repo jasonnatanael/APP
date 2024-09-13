@@ -38,13 +38,15 @@ Como um logo, você irá ultilizar peças para criar algoritimos, ou seja, para 
 - [x] Operador de concatenação: +
 - [x] Operadores de comparação: ==, !=, >, <, >=, <=
 - [x] Operadores lógicos
-- []
+- [x] Spread operator: ...
+
 
 ## Estruturas de dados:
 
 ### Arrays:
 
-Uma lista que contém qualquer tipo de dado
+- [x] Uma lista que contém qualquer tipo de dado
+- [x] Métodos de array: push, [find, forEach, filter] : HOF (High Order Function)
 
 ### Objetos:
 
@@ -74,7 +76,8 @@ Uma lista que contém qualquer tipo de dado
 
 ## Programação assíncrona e promises:
 
-- [x] Uso de funções assíncronas (async, await)
+- [x] Uso de funções "assíncronas", ou seja, as respostas não são imediatas, 
+    sendo enviadas e recebidas em momentos diferentes.  (async, await)
 - []
 
 
