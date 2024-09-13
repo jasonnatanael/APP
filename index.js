@@ -23,15 +23,15 @@ const listarMetas = async () => {
         instructions: false,
     })
 
-    if (respostas.length == 0) {
-        console.log("Nenhuma meta selecionada!")
-        return;
-    }
-
     metas.forEach((meta) => {
         meta.checked = false
     })
 
+    if (respostas.length == 0) {
+        console.log("Nenhuma meta selecionada!")
+        return;
+    }
+    
     respostas.forEach((resposta) => {
         const meta = metas.find((m) => {
             return m.value == resposta
