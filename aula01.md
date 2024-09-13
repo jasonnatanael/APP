@@ -46,7 +46,7 @@ Como um logo, você irá ultilizar peças para criar algoritimos, ou seja, para 
 ### Arrays:
 
 - [x] Uma lista que contém qualquer tipo de dado
-- [x] Métodos de array: push, [find, forEach, filter] : HOF (High Order Function)
+- [x] Métodos de array: push, [find, forEach, filter, map] : HOF (High Order Function)
 
 ### Objetos:
 

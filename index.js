@@ -1,5 +1,7 @@
 const { select, input, checkbox } = require("@inquirer/prompts");
 
+let mensagem = "Bem vindo ao gerenciador de metas!";
+
 let metas = [
   { value: "Tomar 3L de água por dia", checked: false },
 ];
@@ -28,7 +30,7 @@ const listarMetas = async () => {
     })
 
     if (respostas.length == 0) {
-        console.log("Nenhuma meta selecionada!")
+        mensagem = ("Nenhuma meta selecionada!")
         return;
     }
 
@@ -41,7 +43,7 @@ const listarMetas = async () => {
 
     })
 
-    console.log('Meta(s) marcada(s) como concluída(s)')
+    mensagem = 'Meta(s) marcada(s) como concluída(s)'
 };
 
 const deletarMetas = async () => {
@@ -59,7 +61,7 @@ const deletarMetas = async () => {
     })
 
     if(metaDeletar.length == 0) {
-        console.log('Nenhum item foi selecionado!')
+        mensagem = 'Nenhum item foi selecionado!'
         return
     }
 
@@ -67,7 +69,7 @@ const deletarMetas = async () => {
         metas = metas.filter((meta) => {
             return meta.value != item
         })
-        console.log('Meta(s) deletada(s) com sucesso!')
+        mensagem = 'Meta(s) deletada(s) com sucesso!'
     })
 };
 
@@ -77,7 +79,7 @@ const metasRealizadas = async () => {
     })
 
     if(realizadas.length == 0) {
-        console.log('Não existem metas realizadas! :(')
+        mensagem = 'Não existem metas realizadas! :('
         return
     }
     
@@ -95,7 +97,7 @@ const metasAbertas = async () => {
     })
 
     if(abertas.length == 0) {
-        console.log('Não existem metas abertas! :)')
+        mensagem = 'Não existem metas abertas! :)'
         return
     }
 
@@ -107,7 +109,20 @@ const metasAbertas = async () => {
 
 };
 
+const mostrarMensagem = () => {
+        console.clear();
+
+    if (mensagem != "") {
+        console.log(mensagem)
+        console.log("")
+        mensagem = ""
+    }
+
+};
+
 const start = async () => {
+    mostrarMensagem();
+
   while (true) {
     const opcao = await select({
       message: "Menu >",
