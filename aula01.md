@@ -73,6 +73,13 @@ Como um logo, você irá ultilizar peças para criar algoritimos, ou seja, para 
 
 - [x] Importação de módulos (require, CommonJS)
 - [x] Biblioteca 'inquirer' para criar prompts interativos
+- [x] FS (File system)
+
+## JSON
+
+- [x] Javascript Object Notation (.json)
+- [x] JSON.parse() - transforma de json para javascript
+- [x] JSON.stringify() - transforma de javascript para json
 
 ## Programação assíncrona e promises:
 
